@@ -1,7 +1,7 @@
 import React from 'react';
-import FormCadastro from '../Components/cadastro/form';
+import FormCadastro from '../Components/Cadastro/formcadastro';
 
-const CadastroPage = () => {
+const ContatoPage = () => {
     return (
         <>
             <FormCadastro />
@@ -9,4 +9,4 @@ const CadastroPage = () => {
     )
 }
 
-export default CadastroPage;
+export default ContatoPage;

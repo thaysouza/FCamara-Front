@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import CadastroPage from './views/cadastro';
+import CadastroPage from './Views/cadastro';
 
 const MainRoutes = () => {
     return (
