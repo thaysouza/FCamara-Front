@@ -1,0 +1,30 @@
+.area-principal {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-text-index {
+    width: 45vw;
+    text-align: left;
+    padding: 60px 0;
+}
+
+.area-principal .info-index h1 {
+    font-size: 50px;
+    color: #3D3838;
+}
+
+.area-principal .info-index span {
+    font-size: 55px;
+    color: #EF653C;
+}
+
+.img-index {
+    width: 40vw;
+}

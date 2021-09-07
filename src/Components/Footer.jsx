@@ -2,6 +2,7 @@ import React from 'react';
 import logofcamara from "../img/grupo-fcamara-negativo.png";
 
 import "../styles/footer.css"
+import "../styles/global.css"
 
 const Footer = () => {
     return (

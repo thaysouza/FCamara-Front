@@ -1,0 +1,12 @@
+.button-style {
+    background-color: #404099;
+    color: #ffff;
+    width: 250px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}

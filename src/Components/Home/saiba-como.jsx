@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Button from './../button'
 
 const SaibaComo = () => {
     return (
@@ -8,8 +9,11 @@ const SaibaComo = () => {
             <section>
 
                 <h1>Saiba como fazer seu agendamento</h1>
-                <Link to="/cadastro">Cadastre-se</Link>
-
+                <Link to="/cadastro">
+                    <Button>
+                        Cadastre-se
+                    </Button>
+                </Link>
             </section>
 
         </>
