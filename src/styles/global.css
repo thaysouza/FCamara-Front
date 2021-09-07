@@ -1,5 +1,19 @@
-*, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: 'Montserrat', sans-serif;
+
+  --dark-orange: rgb(185, 50, 0);
+  --laranja-fcamara: rgb(254, 68, 0);
+  --light-orange: rgb(254, 187, 162);
+
+  --dark-blue: rgb(42, 41, 98);
+  --azul-fcamara: rgb(54, 56, 126);
+  --light-blue: rgb(168, 168, 208);
 }
