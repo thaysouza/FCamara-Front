@@ -1,55 +1,61 @@
+import '../../styles/form.css';
+
 const FormCadastro = () => {
   return (
     <>
-      <section>
-        <h2>Cadastro de Usuário</h2>
+      <section className='FormContainer'>
+        <h2 className='FormTitle'>Cadastro de Usuário</h2>
         <div>
-          <form action=''>
+          <form className='InputContainer' action=''>
             <fieldset>
               {' '}
-              <label for='nome'>Nome completo</label>
+              <label for='nome'>nome completo</label>
               <input
                 id='nome'
                 type='text'
                 name='nome'
-                placeholder='Informe seu nome'
+                placeholder='informe seu nome'
+                size='34'
               />
             </fieldset>
             <fieldset>
               {' '}
-              <label for='email'>E-mail</label>
+              <label for='email'>e-mail</label>
               <input
                 id='email'
                 type='text'
                 name='email'
-                placeholder='meuemail@fcamara.com.br'
+                placeholder='seuemail@fcamara.com.br'
+                size='34'
               />
             </fieldset>
-            <fieldset>
-              {' '}
-              <label for='senha'>Senha</label>
-              <input
-                id='senha'
-                type='password'
-                name='senha'
-                placeholder='Informe sua senha'
-              />
-              <small>
-                Tamanho mínimo de 6 caracteres; utilize ao menos um caractere
-                especial e um número.
-              </small>
-            </fieldset>
-            <fieldset>
-              {' '}
-              <label for='confirmaSenha'>Confirmar Senha</label>
-              <input
-                id='confirmaSenha'
-                type='password'
-                name='senha'
-                placeholder='Confirme sua senha'
-              />
-            </fieldset>
-            <button type='submit'>Cadastrar</button>
+            <div className='PasswordContainer'>
+              <fieldset>
+                {' '}
+                <label for='senha'>senha</label>
+                <input
+                  id='senha'
+                  type='password'
+                  name='senha'
+                  placeholder='informe sua senha'
+                  size='15'
+                />
+              </fieldset>
+              <fieldset>
+                {' '}
+                <label for='confirmaSenha'>confirmar senha</label>
+                <input
+                  id='confirmaSenha'
+                  type='password'
+                  name='senha'
+                  placeholder='confirme sua senha'
+                  size='15'
+                />
+              </fieldset>
+            </div>
+            <button id='cadastroButton' type='submit'>
+              Cadastrar
+            </button>
           </form>
         </div>
       </section>

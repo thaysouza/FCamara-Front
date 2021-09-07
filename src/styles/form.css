@@ -1,0 +1,50 @@
+@import url('global.css');
+
+.FormContainer {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 3em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+}
+
+.FormTitle {
+  margin-bottom: 1em;
+  font-size: larger;
+}
+
+.InputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PasswordContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  padding: 0.5em;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#cadastroButton {
+  margin-top: 1em;
+  padding: 0.75em;
+  max-width: 50%;
+  border: none;
+  border-radius: 10%;
+  background-color: var(--laranja-fcamara);
+  color: white;
+  font-weight: 600;
+}
