@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from './../button'
+import Button from './button'
 import "../../styles/index.css"
 import "../../styles/global.css"
 import imgPrincipal from '../../img/imgPrincipal.svg'

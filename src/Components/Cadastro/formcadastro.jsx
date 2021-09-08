@@ -1,31 +1,67 @@
-import React from 'react';
+import '../../styles/form.css';
+import Button from '../btn_global'
 
 const FormCadastro = () => {
-    return (
-        <>
-
-            <section>
-
-                <h1>Cadastro Usuário</h1>
-
-                <div>
-                    <form action="">
-                        <h1>Nome Completo</h1>
-                        <input type="text" placeholder="Informe seu nome" />
-                        <h1>E-mail</h1>
-                        <input type="text" placeholder="meuemail@fcamara.com.br" />
-                        <h1>Senha</h1>
-                        <input type="password" placeholder="Informe sua senha" />
-                        <h1>Confirmar Senha</h1>
-                        <input type="password" placeholder="Confirme sua senha" />
-                        <button type="submit">Cadastrar</button>
-                    </form>
-                </div>
-
-            </section>
-
-        </>
-    );
+  return (
+    <>
+      <section className='FormContainer'>
+        <h2 className='FormTitle'>Cadastro de Usuário</h2>
+        <div>
+          <form className='InputContainer' action=''>
+            <fieldset>
+              {' '}
+              <label for='nome'>nome completo</label>
+              <input
+                id='nome'
+                type='text'
+                name='nome'
+                placeholder='informe seu nome'
+                size='34'
+              />
+            </fieldset>
+            <fieldset>
+              {' '}
+              <label for='email'>e-mail</label>
+              <input
+                id='email'
+                type='text'
+                name='email'
+                placeholder='seuemail@fcamara.com.br'
+                size='34'
+              />
+            </fieldset>
+            <div className='PasswordContainer'>
+              <fieldset>
+                {' '}
+                <label for='senha'>senha</label>
+                <input
+                  id='senha'
+                  type='password'
+                  name='senha'
+                  placeholder='informe sua senha'
+                  size='15'
+                />
+              </fieldset>
+              <fieldset>
+                {' '}
+                <label for='confirmaSenha'>confirmar senha</label>
+                <input
+                  id='confirmaSenha'
+                  type='password'
+                  name='senha'
+                  placeholder='confirme sua senha'
+                  size='15'
+                />
+              </fieldset>
+            </div>
+            <Button id='cadastroButton' type='submit'>
+              Cadastrar
+            </Button>
+          </form>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default FormCadastro;
