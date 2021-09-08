@@ -5,7 +5,6 @@ const FormCadastro = () => {
   return (
     <>
       <section className='FormContainer'>
-        <h2 className='FormTitle'>Cadastro de Usuário</h2>
         <div>
           <form className='InputContainer' action=''>
             <fieldset>
@@ -54,9 +53,9 @@ const FormCadastro = () => {
                 />
               </fieldset>
             </div>
-            <Button id='cadastroButton' type='submit'>
+             <Button id='cadastroButton' type='submit'>
               Cadastrar
-            </Button>
+            </Button> 
           </form>
         </div>
       </section>

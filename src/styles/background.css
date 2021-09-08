@@ -1,0 +1,56 @@
+@import url('global.css');
+
+.container-bg{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--azul-fcamara);
+    width: 100%;
+    margin:0;
+    overflow: hidden;
+}
+
+.text-cadastro{
+    font-size: 45px;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.text-info-cadastro{
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.img-ondas{
+    right: 65%;
+    top: 65%;
+    position: absolute;
+    opacity: .6;
+
+}
+
+.img-pontilhados{
+    right: 84%;
+    top: 45%;
+    position: absolute;
+    opacity: .6;
+}
+
+.img-pontos{
+    top: 77%;
+    right: 84%;
+    position: absolute; 
+    opacity: .6;
+}
+
+.img-x{
+    position: absolute;
+    right: 88%;
+    top: 88%;
+    opacity: .6;
+    
+}

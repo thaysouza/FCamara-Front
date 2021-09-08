@@ -23,7 +23,8 @@
   width: 100%;
   color: white;
   padding: 10px 0;
-  background-color: var(--azul-fcamara);
+  background-color: var(--laranja-fcamara);
   border: none;
   cursor: pointer;
+  font-weight: 600;
 }
