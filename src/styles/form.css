@@ -2,7 +2,7 @@
 
 .FormContainer {
   height: 70vh;
-  width: 650px;
+  max-width: 650px;
   margin: 0 auto;
   padding: 3em;
   border-radius: 1em;
@@ -29,8 +29,10 @@
 }
 
 .PasswordContainer {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -43,3 +45,13 @@ fieldset {
   justify-content: center;
 }
 
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 0.75em 1.25em;
+  margin: 0.5em 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  box-sizing: border-box;
+}

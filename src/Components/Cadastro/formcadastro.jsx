@@ -1,5 +1,5 @@
 import '../../styles/form.css';
-import Button from '../btn_global'
+import Button from '../btn_global';
 
 const FormCadastro = () => {
   return (
@@ -38,7 +38,7 @@ const FormCadastro = () => {
                   type='password'
                   name='senha'
                   placeholder='informe sua senha'
-                  size='15'
+                  size='10'
                 />
               </fieldset>
               <fieldset>
@@ -49,13 +49,13 @@ const FormCadastro = () => {
                   type='password'
                   name='senha'
                   placeholder='confirme sua senha'
-                  size='15'
+                  size='10'
                 />
               </fieldset>
             </div>
-             <Button id='cadastroButton' type='submit'>
+            <Button id='cadastroButton' type='submit'>
               Cadastrar
-            </Button> 
+            </Button>
           </form>
         </div>
       </section>
