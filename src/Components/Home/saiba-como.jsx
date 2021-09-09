@@ -10,7 +10,7 @@ const SaibaComo = () => {
     return (
         <>
 
-            <section className="area-saiba-como">
+            <section id="saibacomo" className="area-saiba-como">
                 <div>
                <h1 className="title-saiba-como">Saiba como fazer seu agendamento</h1>
 

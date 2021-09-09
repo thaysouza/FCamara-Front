@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-scroll";
 
 import Button from './button'
 import "../../styles/index.css"
@@ -16,7 +17,7 @@ const Home = () => {
                             <h1><span className="text-orange">#SangueLaranja</span> esperamos pelo seu retorno em nossos escritórios, faça  seu agendamento!</h1>
                         </div>
                     </div>
-                    <Button>Saiba como</Button>
+                    <Link to="saibacomo" smooth={true}> <Button>Saiba como</Button></Link>      
                 </div>
 
 
