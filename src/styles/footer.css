@@ -15,8 +15,13 @@
     height: 33px;
 }
 
-.footer .r-footer i {
+.footer .r-footer a{
     margin-left: 20px;
     color: white;
     font-size: 20px;
+    text-decoration: none;
+}
+
+.footer .r-footer a:hover{
+    color: var(--laranja-fcamara);
 }
