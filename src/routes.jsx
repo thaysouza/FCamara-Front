@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import HomePage from './Views/home'
-import CadastroPage from './Views/cadastro';
+import HomePage from './page/home'
+import CadastroPage from './page/cadastro';
 
 const MainRoutes = () => {
     return (
