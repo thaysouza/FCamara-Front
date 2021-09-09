@@ -31,16 +31,3 @@
   width: 45vw;
   height: 30rem;
 }
-
-@media (max-width: 900px) {
-  .area-principal {
-    display: flex;
-    flex-direction: column;
-  }
-  .info-index {
-    width: 85vw;
-  }
-  .img-principal {
-    width: 85vw;
-  }
-}
