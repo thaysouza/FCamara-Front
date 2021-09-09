@@ -1,38 +1,46 @@
 .area-principal {
-    height: 90vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .container-text-index {
-    width: 45vw;
-    text-align: left;
-    padding: 60px 0;
+  width: 45vw;
+  text-align: left;
+  padding: 3.75rem 0;
 }
 
-.area-principal .info-index{
-    padding-bottom: 10vh;
+.area-principal .info-index {
+  padding-bottom: 10vh;
 }
 
 .area-principal .info-index h1 {
-    font-size: 40px;
-    color: #3D3838;
+  font-size: 2.5rem;
+  color: #3d3838;
 }
 
 .area-principal .info-index span {
-    font-size: 55px;
-    color: #EF653C;
+  font-size: 55px;
+  color: #ef653c;
 }
 
-.img-index {
-    width: 40vw;
+.img-principal {
+  width: 45vw;
+  height: 30rem;
 }
 
-.img-index img{
-    height: 480px;
+@media (max-width: 900px) {
+  .area-principal {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-index {
+    width: 85vw;
+  }
+  .img-principal {
+    width: 85vw;
+  }
 }
