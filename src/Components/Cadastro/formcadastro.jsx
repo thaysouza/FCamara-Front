@@ -1,5 +1,6 @@
 import '../../styles/form.css';
 import Button from '../btn_global';
+import { Link } from "react-router-dom";
 
 const FormCadastro = () => {
   return (
@@ -9,7 +10,7 @@ const FormCadastro = () => {
           <form className='InputContainer' action=''>
             <fieldset>
               {' '}
-              <label for='nome'>nome completo</label>
+              <label for='nome'>nome completo*</label>
               <input
                 id='nome'
                 type='text'
@@ -20,7 +21,7 @@ const FormCadastro = () => {
             </fieldset>
             <fieldset>
               {' '}
-              <label for='email'>e-mail</label>
+              <label for='email'>e-mail*</label>
               <input
                 id='email'
                 type='text'
@@ -32,7 +33,7 @@ const FormCadastro = () => {
             <div className='PasswordContainer'>
               <fieldset>
                 {' '}
-                <label for='senha'>senha</label>
+                <label for='senha'>senha*</label>
                 <input
                   id='senha'
                   type='password'
@@ -43,7 +44,7 @@ const FormCadastro = () => {
               </fieldset>
               <fieldset>
                 {' '}
-                <label for='confirmaSenha'>confirmar senha</label>
+                <label for='confirmaSenha'>confirmar senha*</label>
                 <input
                   id='confirmaSenha'
                   type='password'
@@ -57,6 +58,7 @@ const FormCadastro = () => {
               Cadastrar
             </Button>
           </form>
+          <p>Já possui cadastro? <Link to='/login'>Faça Login.</Link></p>
         </div>
       </section>
     </>
