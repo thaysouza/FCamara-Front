@@ -1,0 +1,31 @@
+.area-saiba-como{
+    background-color: var(--light-gray);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-saiba-como{
+    color: var(--dark-gray);
+    font-size: 45px;
+}
+
+.container-content{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.area-content-icon{
+    width: 25vw;
+    margin: 0 2vw;
+    font-size: 14px;
+}
+
+.area-content-icon p{
+    margin-top: 20px;
+}
