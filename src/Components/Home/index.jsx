@@ -10,7 +10,6 @@ const Home = () => {
   return (
     <>
       <section className='area-principal'>
-        <div className='info-index'>
           <div>
             <div className='container-text-index'>
               <h1>
@@ -18,7 +17,6 @@ const Home = () => {
                 pelo seu retorno em nossos escritórios, faça seu agendamento!
               </h1>
             </div>
-          </div>
           <Link to='saibacomo' smooth={true}>
             {' '}
             <Button>Saiba como</Button>

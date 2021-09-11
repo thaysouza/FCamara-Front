@@ -9,25 +9,44 @@
 
 .container-text-index {
   width: 45vw;
-  text-align: left;
-  padding: 3.75rem 0;
+  margin-bottom: 5vh;
 }
 
-.area-principal .info-index {
-  padding-bottom: 10vh;
-}
-
-.area-principal .info-index h1 {
-  font-size: 2.5rem;
+.area-principal h1 {
+  font-size: 3vw;
   color: #3d3838;
 }
 
-.area-principal .info-index span {
-  font-size: 55px;
+.area-principal span {
+  font-size: 4vw;
   color: #ef653c;
 }
 
 .img-principal {
   width: 45vw;
   height: 30rem;
+}
+
+
+@media (max-width: 575.98px) {
+
+  .container-text-index {
+    width: 90vw;
+    text-align: center;
+ 
+  }
+ 
+  .area-principal  span {
+    font-size: 40px;
+  }
+
+  .area-principal  h1 {
+    font-size: 30px;
+
+  }
+
+  .img-principal {
+    display: none;
+  }
+  
 }
