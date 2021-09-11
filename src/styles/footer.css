@@ -11,7 +11,7 @@
 }
 
 .footer .l-footer img {
-    width: 10em;
+    width: 8em;
     height: 2em;
 }
 
@@ -24,4 +24,33 @@
 
 .footer .r-footer a:hover{
     color: var(--laranja-fcamara);
+}
+
+
+@media (max-width: 575.98px) {
+    .footer {
+        padding: 0 40px;
+    }
+    
+    .footer .l-footer img {
+        width: 5.5em;
+        height: 1.2em;
+    } 
+
+}
+
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .footer {
+        padding: 0 60px;
+    }
+    
+    .footer .l-footer img {
+        width: 6em;
+        height: 1.5em;
+    } 
+    
+    .footer .r-footer a{
+        font-size: 1.2em;
+    }
 }
