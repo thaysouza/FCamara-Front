@@ -9,6 +9,10 @@
     cursor: pointer;
 }
 
+.button-style:hover{
+    filter: brightness(1.2);
+}
+
 @media (max-width: 575.98px) {
 
     .button-style {

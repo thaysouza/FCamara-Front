@@ -42,11 +42,15 @@
 
 fieldset {
   width: 100%;
-  padding: 0.5em 0;
+  padding: 0.4em 0;
   border: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+Button{
+  margin-top: 1.5vh;
 }
 
 input[type='text'],
@@ -65,4 +69,14 @@ input[type='password'] {
   text-align: end;
   font-weight: 500;
   margin-top: .6em;
+}
+
+
+@media (max-width: 575.98px) {
+  
+  .FormContainer {
+    padding: 2.5em;
+   
+  }
+  
 }
