@@ -3,7 +3,7 @@ import pontilhados from '../img/pontilhados.png';
 import pontos from '../img/pontos.png';
 import x from '../img/x.png';
 
-const Grafismos = () => {
+const GrafismosBlue = () => {
   return (
     <>
       <img className='img-ondas' src={ondas} alt='' />
@@ -14,4 +14,4 @@ const Grafismos = () => {
   );
 };
 
-export default Grafismos;
+export default GrafismosBlue;

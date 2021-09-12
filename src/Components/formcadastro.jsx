@@ -2,11 +2,13 @@ import '../styles/form.css';
 import Button from './btn_global';
 import { Link } from 'react-router-dom';
 
+import UserService from '../services/user.service';
+
 const FormCadastro = () => {
   return (
     <>
       <section className='FormContainer'>
-        <div>
+        <div className='areaBlue'>
           <form className='InputContainer' action=''>
             <fieldset>
               {' '}
@@ -55,7 +57,7 @@ const FormCadastro = () => {
               </fieldset>
             </div>
             <Button id='cadastroButton' type='submit'>
-              Cadastrar
+              CADASTRAR
             </Button>
           </form>
           <p>
