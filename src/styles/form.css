@@ -4,13 +4,13 @@
   height: 70vh;
   max-width: 650px;
   margin: 0 auto;
-  padding: 6em;
+  padding: 2em 6em;
   border-radius: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #eee;
+  background:white;
   z-index: 1;
   position: relative;
 }

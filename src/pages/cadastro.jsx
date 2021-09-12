@@ -1,5 +1,5 @@
 import React from 'react';
-import FormCadastro from '../Components/Cadastro/formcadastro';
+import FormCadastro from '../Components/formcadastro';
 import '../styles/background.css';
 import Grafismos from '../Components/grafismos';
 

@@ -1,5 +1,5 @@
-import '../../styles/form.css';
-import Button from '../btn_global';
+import '../styles/form.css';
+import Button from './btn_global';
 import { Link } from "react-router-dom";
 
 const FormCadastro = () => {
