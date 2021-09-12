@@ -1,6 +1,8 @@
 import '../styles/form.css';
 import Button from './btn_global';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
+import UserService from '../services/user.service';
 
 const FormLogin = () => {
   return (
@@ -34,7 +36,9 @@ const FormLogin = () => {
               ENTRAR
             </Button>
           </form>
-          <p>Não possui Login? <Link to='/cadastro'>Faça o Cadastro.</Link></p>
+          <p>
+            Não possui Login? <Link to='/cadastro'>Faça o Cadastro.</Link>
+          </p>
         </div>
       </section>
     </>

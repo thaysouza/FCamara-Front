@@ -1,6 +1,6 @@
-import '../../styles/form.css';
-import Button from '../btn_global';
-import { Link } from "react-router-dom";
+import '../styles/form.css';
+import Button from './btn_global';
+import { Link } from 'react-router-dom';
 
 const FormCadastro = () => {
   return (
@@ -58,7 +58,9 @@ const FormCadastro = () => {
               Cadastrar
             </Button>
           </form>
-          <p>Já possui cadastro? <Link to='/login'>Faça Login.</Link></p>
+          <p>
+            Já possui cadastro? <Link to='/login'>Faça Login.</Link>
+          </p>
         </div>
       </section>
     </>

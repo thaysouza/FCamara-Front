@@ -1,3 +1,5 @@
+@import url('global.css');
+
 .area-principal {
   height: 90vh;
   margin: 0 auto;
@@ -27,26 +29,21 @@
   height: 30rem;
 }
 
-
 @media (max-width: 575.98px) {
-
   .container-text-index {
     width: 90vw;
     text-align: center;
- 
   }
- 
-  .area-principal  span {
+
+  .area-principal span {
     font-size: 40px;
   }
 
-  .area-principal  h1 {
+  .area-principal h1 {
     font-size: 30px;
-
   }
 
   .img-principal {
     display: none;
   }
-  
 }
