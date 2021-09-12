@@ -8,7 +8,7 @@ const FormLogin = () => {
   return (
     <>
       <section className='FormContainer'>
-        <div>
+        <div className="areaOrange">
           <form className='InputContainer' action=''>
             <fieldset>
               {' '}
