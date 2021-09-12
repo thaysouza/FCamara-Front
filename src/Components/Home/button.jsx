@@ -1,4 +1,4 @@
-import "../styles/buttonIndex.css"
+import "../../styles/buttonIndex.css"
 
 import React from 'react';
 

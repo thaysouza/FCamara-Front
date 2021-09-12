@@ -1,15 +1,16 @@
 import '../../styles/form.css';
+import Button from '../btn_global';
+import { Link } from "react-router-dom";
 
 const FormCadastro = () => {
   return (
     <>
       <section className='FormContainer'>
-        <h2 className='FormTitle'>Cadastro de Usuário</h2>
         <div>
           <form className='InputContainer' action=''>
             <fieldset>
               {' '}
-              <label for='nome'>nome completo</label>
+              <label for='nome'>nome completo*</label>
               <input
                 id='nome'
                 type='text'
@@ -20,7 +21,7 @@ const FormCadastro = () => {
             </fieldset>
             <fieldset>
               {' '}
-              <label for='email'>e-mail</label>
+              <label for='email'>e-mail*</label>
               <input
                 id='email'
                 type='text'
@@ -32,31 +33,32 @@ const FormCadastro = () => {
             <div className='PasswordContainer'>
               <fieldset>
                 {' '}
-                <label for='senha'>senha</label>
+                <label for='senha'>senha*</label>
                 <input
                   id='senha'
                   type='password'
                   name='senha'
                   placeholder='informe sua senha'
-                  size='15'
+                  size='10'
                 />
               </fieldset>
               <fieldset>
                 {' '}
-                <label for='confirmaSenha'>confirmar senha</label>
+                <label for='confirmaSenha'>confirmar senha*</label>
                 <input
                   id='confirmaSenha'
                   type='password'
                   name='senha'
                   placeholder='confirme sua senha'
-                  size='15'
+                  size='10'
                 />
               </fieldset>
             </div>
-            <button id='cadastroButton' type='submit'>
+            <Button id='cadastroButton' type='submit'>
               Cadastrar
-            </button>
+            </Button>
           </form>
+          <p>Já possui cadastro? <Link to='/login'>Faça Login.</Link></p>
         </div>
       </section>
     </>

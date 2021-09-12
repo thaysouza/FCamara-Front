@@ -16,4 +16,18 @@
   --dark-blue: rgb(42, 41, 98);
   --azul-fcamara: rgb(54, 56, 126);
   --light-blue: rgb(168, 168, 208);
+
+  --light-gray: #F3F4F9;
+  --dark-gray: #3D3838;
+}
+
+
+.btn-global-style{
+  width: 100%;
+  color: white;
+  padding: 10px 0;
+  background-color: var(--laranja-fcamara);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
 }

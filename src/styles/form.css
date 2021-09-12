@@ -1,15 +1,18 @@
 @import url('global.css');
 
 .FormContainer {
+  height: 70vh;
   max-width: 650px;
   margin: 0 auto;
-  padding: 3em;
+  padding: 6em;
   border-radius: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #eee;
+  z-index: 1;
+  position: relative;
 }
 
 .FormTitle {
@@ -18,6 +21,7 @@
 }
 
 .InputContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,26 +29,54 @@
 }
 
 .PasswordContainer {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
+.PasswordContainer fieldset:first-child {
+   margin-right: 1em;
+}
+
 fieldset {
-  padding: 0.5em;
+  width: 100%;
+  padding: 0.4em 0;
   border: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#cadastroButton {
-  margin-top: 1em;
-  padding: 0.75em;
-  max-width: 50%;
-  border: none;
-  border-radius: 10%;
-  background-color: var(--laranja-fcamara);
-  color: white;
-  font-weight: 600;
+Button{
+  margin-top: 1.5vh;
+}
+
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 0.75em 1.25em;
+  margin: 0.5em 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  box-sizing: border-box;
+}
+
+.FormContainer p{
+  font-size:small;
+  text-align: end;
+  font-weight: 500;
+  margin-top: .6em;
+}
+
+
+@media (max-width: 575.98px) {
+  
+  .FormContainer {
+    padding: 2.5em;
+   
+  }
+  
 }

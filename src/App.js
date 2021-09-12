@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Footer from './Components/Footer';
 import Routes from './routes';
@@ -9,11 +9,10 @@ function App() {
     <>
       <Router>
         <Routes />
-        <Footer />
       </Router>
+      <Footer />
     </>
   );
 }
 
 export default App;
-

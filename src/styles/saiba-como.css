@@ -1,0 +1,60 @@
+.area-saiba-como{
+    background-color: var(--light-gray);
+    text-align: center;
+    padding: 15vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-saiba-como{
+    color: var(--dark-gray);
+    font-size: 3.2vw;
+}
+
+.container-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.area-content-icon{
+    width: 25vw;
+    margin: 0 2vw;
+    font-size: 1vw;
+    padding: 4vh 0;
+}
+
+.area-content-icon .img-icon{
+    width: 8vw;
+}
+
+.area-content-icon p{
+    margin-top: 4vh;
+}
+
+
+@media (max-width: 575.98px) {
+
+.title-saiba-como{
+     font-size: 4.5vw;
+}
+    
+.area-content-icon{
+    width: 30vw;
+    margin: 0 1vw;
+}
+
+.area-content-icon .img-icon{
+    width: 12vw;
+}
+
+.area-content-icon p{
+    font-size: 1.8em;
+}
+
+
+
+}
