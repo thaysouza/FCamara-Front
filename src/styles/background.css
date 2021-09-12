@@ -1,5 +1,10 @@
 @import url('global.css');
 
+
+.container-bg.colorOrange{
+background-color: var(--laranja-fcamara);
+}
+
 .container-bg{
     height: 100vh;
     display: flex;

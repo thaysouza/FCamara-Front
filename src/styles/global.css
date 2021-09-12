@@ -31,3 +31,7 @@
   cursor: pointer;
   font-weight: 600;
 }
+
+.areaOrange Button{
+  background-color: var(--azul-fcamara);
+}
