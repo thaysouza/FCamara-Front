@@ -1,14 +1,14 @@
-import axios from 'axios';
-import authHeader from './auth-header';
+// import axios from 'axios';
+// import authHeader from './auth-header';
 
-const API_URL = 'http://localhost:5000/agendamentos';
+// const API_URL = 'http://localhost:5000/agendamentos';
 
-const listAllAppointments = () => {
-  return axios.get(API_URL + 'seus-agendamentos', {
-    headers: authHeader(),
-  });
-};
+// const listAllAppointments = () => {
+//   return axios.get(API_URL + 'seus-agendamentos', {
+//     headers: authHeader(),
+//   });
+// };
 
-export default {
-  listAllAppointments,
-};
+// export default {
+//   listAllAppointments,
+// };
