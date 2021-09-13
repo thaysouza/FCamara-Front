@@ -9,10 +9,10 @@ import UnidadePage from './pages/unidade';
 const MainRoutes = () => {
   return (
     <Switch>
-      <Route exact path='/' component={() => <HomePage />} />
+      <Route exact path='/' component={HomePage} />
       <Route path='/cadastro' component={cadastro} />
       <Route path='/login' component={LoginPage} />
-      <Route path='/unidade' component={() =><UnidadePage />} />
+      <Route path='/unidade' component={UnidadePage} />
     </Switch>
   );
 };
