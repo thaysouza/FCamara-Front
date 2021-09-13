@@ -20,6 +20,41 @@ export default class FormCadastro extends Component {
     });
   };
 
+  handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const { name, email, password, confirmPassword } = this.state;
+      
+      if (password !== confirmPassword) {
+        this.state({
+          message: 'As senhas não correspondem, tente novamente!'
+        });
+        return;
+      }
+
+      this.setState({
+        name: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+        errorMessage: ''
+      });
+
+      await api.register({
+        name,
+        email,
+        password
+      });
+      this.props.history.push('/login'); 
+      
+    } catch (error) {
+      this.setState({
+        message: 'error.response.data'
+      });
+    }
+  }
+
   render () {
     return (
       <>
