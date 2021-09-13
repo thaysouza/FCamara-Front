@@ -6,7 +6,7 @@ import imgLocal from '../img/imglocal.png';
 
 const Unidade = () => {
 
-    const [formData, setfromData] = useState({
+    const [formData, setformData] = useState({
         unidade: ""
     })
 
@@ -15,7 +15,7 @@ const Unidade = () => {
         const name = target.name
         const value = target.value
        
-        setfromData({
+        setformData({
             ...formData,
             [name] : value
         })
@@ -30,8 +30,6 @@ const Unidade = () => {
                         <img src={imgLocal} alt='' />
                       
                         <form>
-
-                            <h1>Você escolheu a unidade de {formData.unidade}</h1>
                             
                             <div className="radio-item">
                                 <div className="type-radio">

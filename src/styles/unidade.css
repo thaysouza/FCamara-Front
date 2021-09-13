@@ -1,3 +1,5 @@
+@import url('global.css');
+
 .areaContainer{
     height: 100%;
     width: 100%;
@@ -9,32 +11,58 @@
 
 .areaContainer img{
     margin-bottom: 4vh;
+    width: 50%;
+}
+
+
+.type-radio{
+    text-align: center;
+    display: block;
+}
+
+
+.type-radio label{
+    font-size: 1.3em;
+    padding-left:15px;
 }
 
 .radio-item{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--dark-blue);
+    font-weight: bold;
   }
 
 .areaContainer p{
-   font-size: .9vw;
+   font-size: 12px;
    text-align: center;
-   padding: 0 8vw;
-   margin-bottom: 3vh;
-}
-
-.type-radio{
-    width: 10vw;
-    text-align: left;
-    display: block;
-}
-
-.type-radio label{
-    font-size: 1.5vw;
-    padding-left:15px;
+   padding: 0 6vw;
+   margin-bottom: 4vh;
 }
 
 
+@media (max-width: 575.98px) {
+
+    .type-radio label{
+        font-size: 1em;
+    }
+    
+    .areaContainer p{
+        font-size: 10px;
+        margin-bottom: 3vh;
+        width: 70vw;
+     }
+}
  
-  
+
+
+@media (min-width: 576px) and (max-width: 992px) {
+   .type-radio label{
+        font-size: 1.2em;
+    }
+
+    .areaContainer p{
+        font-size: 12px;  
+     }
+  }
