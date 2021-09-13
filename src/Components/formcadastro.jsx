@@ -5,6 +5,13 @@ import React, { Component } from 'react';
 import api from '../services/api.service';
 
 export default class FormCadastro extends Component {
+  state = {
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    message: ''
+  }
 
   render () {
     return (
