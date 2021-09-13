@@ -60,49 +60,60 @@ export default class FormCadastro extends Component {
       <>
         <section className='FormContainer'>
           <div className='areaBlue'>
-            <form className='InputContainer' action=''>
+            <form
+            onSubmit={this.handleSubmit} 
+            className='InputContainer' 
+            >
               <fieldset>
                 {' '}
-                <label for='nome'>nome completo*</label>
+                <small>nome completo*</small>
                 <input
-                  id='nome'
                   type='text'
-                  name='nome'
+                  required
+                  name='name'
                   placeholder='informe seu nome'
+                  value={this.state.name}
+                  onChange={this.handleInput}
                   size='34'
                 />
               </fieldset>
               <fieldset>
                 {' '}
-                <label for='email'>e-mail*</label>
+                <small>e-mail*</small>
                 <input
-                  id='email'
-                  type='text'
+                  type='email'
                   name='email'
+                  required
                   placeholder='seuemail@fcamara.com.br'
+                  value={this.state.email}
+                  onChange={this.handleInput}
                   size='34'
                 />
               </fieldset>
               <div className='PasswordContainer'>
                 <fieldset>
                   {' '}
-                  <label for='senha'>senha*</label>
+                  <small>senha*</small>
                   <input
-                    id='senha'
                     type='password'
-                    name='senha'
-                    placeholder='informe sua senha'
+                    name='password'
+                    required
+                    placeholder='informe a senha'
+                    value={this.state.password}
+                    onChange={this.handleInput}
                     size='10'
                   />
                 </fieldset>
                 <fieldset>
                   {' '}
-                  <label for='confirmaSenha'>confirmar senha*</label>
+                  <small>confirmar senha*</small>
                   <input
-                    id='confirmaSenha'
                     type='password'
-                    name='senha'
-                    placeholder='confirme sua senha'
+                    name='confirmPassword'
+                    required
+                    value={this.state.confirmPassword}
+                    onChange={this.handleInput}
+                    placeholder='confirme a senha'
                     size='10'
                   />
                 </fieldset>
@@ -111,6 +122,9 @@ export default class FormCadastro extends Component {
                 CADASTRAR
               </Button>
             </form>
+            {this.state.message && (
+              <div>{this.state.message}</div>
+            )}
             <p>
               Já possui cadastro? <Link to='/login'>Faça Login.</Link>
             </p>
