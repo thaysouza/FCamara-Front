@@ -12,7 +12,7 @@ export default class FormCadastro extends Component {
     confirmPassword: '',
     message: ''
   }
-
+  
   handleInput = (e) => {
     const { name, value } = e.target;
     this.setState({
@@ -27,7 +27,7 @@ export default class FormCadastro extends Component {
       const { name, email, password, confirmPassword } = this.state;
       
       if (password !== confirmPassword) {
-        this.state({
+        this.setState({
           message: 'As senhas não correspondem, tente novamente!'
         });
         return;
@@ -49,6 +49,7 @@ export default class FormCadastro extends Component {
       this.props.history.push('/login'); 
       
     } catch (error) {
+      console.log(error)
       this.setState({
         message: 'error.response.data'
       });

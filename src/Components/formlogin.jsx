@@ -2,7 +2,7 @@ import '../styles/form.css';
 import Button from './btn_global';
 import { Link } from 'react-router-dom';
 
-import UserService from '../services/api.service';
+import api from '../services/api.service';
 
 const FormLogin = () => {
   return (

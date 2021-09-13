@@ -39,7 +39,7 @@ const Unidade = () => {
                                         name="unidade"
                                         value="sp"
                                         onChange={handleChange}
-                                        checked={formData.unidade=="sp"}
+                                        checked={formData.unidade==="sp"}
                                     />
                                     <label for="sp">São Paulo</label>
                                 </div>

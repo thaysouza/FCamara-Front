@@ -3,7 +3,7 @@ import axios from 'axios';
 class Api {
   constructor() {
     this.api = axios.create({
-      baseUrl: 'https://fcamara-project-api.herokuapp.com'
+      baseURL: 'https://fcamara-project-api.herokuapp.com'
       // baseUrl: 'http://localhost:5000'
     });
 
