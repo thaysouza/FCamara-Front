@@ -10,13 +10,13 @@ class FormCadastro extends Component {
     email: '',
     password: '',
     confirmPassword: '',
-    message: ''
-  }
-  
+    message: '',
+  };
+
   handleInput = (e) => {
     const { name, value } = e.target;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -25,10 +25,10 @@ class FormCadastro extends Component {
 
     try {
       const { name, email, password, confirmPassword } = this.state;
-      
+
       if (password !== confirmPassword) {
         this.setState({
-          message: 'As senhas não correspondem, tente novamente!'
+          message: 'As senhas não correspondem, tente novamente!',
         });
         return;
       }
@@ -38,36 +38,32 @@ class FormCadastro extends Component {
         email: '',
         password: '',
         confirmPassword: '',
-        errorMessage: ''
+        errorMessage: '',
       });
 
       await api.register({
         name,
         email,
-        password
+        password,
       });
-      this.props.history.push('/login'); 
-      
+      this.props.history.push('/login');
     } catch (error) {
-      console.log(error)
+      console.log(error);
       this.setState({
-        message: 'error.response.data'
+        message: 'error.response.data',
       });
     }
-  }
+  };
 
-  render () {
+  render() {
     return (
       <>
         <section className='FormContainer'>
           <div className='areaBlue'>
-            <form
-            onSubmit={this.handleSubmit} 
-            className='InputContainer' 
-            >
+            <form onSubmit={this.handleSubmit} className='InputContainer'>
               <fieldset>
                 {' '}
-                <small>nome completo*</small>
+                <label for='name'>nome completo*</label>
                 <input
                   type='text'
                   required
@@ -80,7 +76,7 @@ class FormCadastro extends Component {
               </fieldset>
               <fieldset>
                 {' '}
-                <small>e-mail*</small>
+                <label for='email'>e-mail*</label>
                 <input
                   type='email'
                   name='email'
@@ -94,7 +90,7 @@ class FormCadastro extends Component {
               <div className='PasswordContainer'>
                 <fieldset>
                   {' '}
-                  <small>senha*</small>
+                  <label for='password'>senha*</label>
                   <input
                     type='password'
                     name='password'
@@ -107,7 +103,7 @@ class FormCadastro extends Component {
                 </fieldset>
                 <fieldset>
                   {' '}
-                  <small>confirmar senha*</small>
+                  <label for='confirmPassword'>confirmar senha*</label>
                   <input
                     type='password'
                     name='confirmPassword'
@@ -123,9 +119,7 @@ class FormCadastro extends Component {
                 CADASTRAR
               </Button>
             </form>
-            {this.state.message && (
-              <div>{this.state.message}</div>
-            )}
+            {this.state.message && <div>{this.state.message}</div>}
             <p>
               Já possui cadastro? <Link to='/login'>Faça Login.</Link>
             </p>
@@ -134,7 +128,6 @@ class FormCadastro extends Component {
       </>
     );
   }
-  
-};
+}
 
 export default withRouter(FormCadastro);
