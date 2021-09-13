@@ -13,6 +13,13 @@ export default class FormCadastro extends Component {
     message: ''
   }
 
+  handleInput = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
   render () {
     return (
       <>
