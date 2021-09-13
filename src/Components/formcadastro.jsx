@@ -1,10 +1,10 @@
 import '../styles/form.css';
 import Button from './btn_global';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import React, { Component } from 'react';
 import api from '../services/api.service';
 
-export default class FormCadastro extends Component {
+class FormCadastro extends Component {
   state = {
     name: '',
     email: '',
@@ -136,3 +136,5 @@ export default class FormCadastro extends Component {
   }
   
 };
+
+export default withRouter(FormCadastro);
