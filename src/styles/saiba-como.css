@@ -3,7 +3,7 @@
 .area-saiba-como {
   background-color: var(--light-gray);
   text-align: center;
-  padding: 15vh 0;
+  padding: 15vh 20vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +11,7 @@
 
 .title-saiba-como {
   color: var(--dark-gray);
-  font-size: 3.2vw;
+  font-size: 2.5rem;
 }
 
 .container-content {
@@ -23,28 +23,54 @@
 }
 
 .area-content-icon {
-  width: 25vw;
+  width: 30vw;
   margin: 0 2vw;
-  font-size: 1vw;
-  padding: 4vh 0;
+  padding: 1rem;
 }
 
-.area-content-icon .img-icon {
+.img-icon {
   width: 8vw;
 }
 
 .area-content-icon p {
   margin-top: 4vh;
+  font-size: 1rem;
+}
+
+@media (max-width: 950px) {
+  .container-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+
+  .container-content .area-content-icon {
+    max-width: 90%;
+    width: 75vw;
+    padding: 0.75rem;
+  }
+
+  .area-content-icon .img-icon {
+    width: 15vw;
+  }
+
+  .area-content-icon p,
+  .btn-cadastro {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 575.98px) {
   .title-saiba-como {
-    font-size: 4.5vw;
+    font-size: 1.5rem;
   }
 
   .area-content-icon {
     width: 30vw;
     margin: 0 1vw;
+    padding: 0.5rem;
   }
 
   .area-content-icon .img-icon {
@@ -52,16 +78,6 @@
   }
 
   .area-content-icon p {
-    font-size: 1.8em;
+    font-size: 1rem;
   }
 }
-
-@media (max-width: 950px) {
-  .container-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 1.5rem 0;
-  }
-} ;
