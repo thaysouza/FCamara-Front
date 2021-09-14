@@ -1,3 +1,5 @@
+@import url('global.css');
+
 .area-saiba-como {
   background-color: var(--light-gray);
   text-align: center;
