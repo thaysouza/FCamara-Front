@@ -41,11 +41,6 @@ const Header = () => {
           </button>
           <ul id='menu' role='menu'>
             <li>
-              <Link className='link-menu' to='/'>
-                Lorem Ipsum
-              </Link>
-            </li>
-            <li>
               <Link className='link-menu' to='/cadastro'>
                 Cadastre-se
               </Link>
@@ -58,7 +53,6 @@ const Header = () => {
           </ul>
         </nav>
       </header>
-      <script src='home.js'></script>
     </>
   );
 };

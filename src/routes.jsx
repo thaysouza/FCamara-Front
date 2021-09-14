@@ -5,6 +5,8 @@ import HomePage from './pages/home';
 import cadastro from './pages/cadastro';
 import LoginPage from './pages/login';
 import UnidadePage from './pages/unidade';
+import EntryPage from './pages/entry';
+
 
 const MainRoutes = () => {
   return (
@@ -13,6 +15,7 @@ const MainRoutes = () => {
       <Route path='/cadastro' component={cadastro} />
       <Route path='/login' component={LoginPage} />
       <Route path='/unidade' component={UnidadePage} />
+      <Route path='/entry' component={EntryPage} />
     </Switch>
   );
 };

@@ -1,0 +1,61 @@
+@import url('global.css');
+
+.Container-entry{
+    height: 90vh;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:white;
+    z-index: 1;
+    position: relative;
+}
+
+.areaContainerEntry{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-entry{
+    margin-bottom: 1.5em;
+    font-size: 1.8em;
+    color: var(--dark-gray);
+}
+
+.areaContainerEntry img{
+    margin-bottom: 4vh;
+    width: 50%;
+}
+
+.areaContainerEntry p{
+   display: block;
+   font-size: 16px;
+   text-align: left;
+   margin: 0 0  1.5em 3.5em;
+   width: 30vw;
+}
+
+.areaContainerEntry p::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    background: var(--dark-blue);
+  }
+
+  .info-entry{
+      font-size: 12px;
+      text-align: center;
+      margin-top:2vh;
+      color: red;
+      width: 50vw;
+      font-weight: 600;
+  }
