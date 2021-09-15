@@ -12,6 +12,7 @@
     background:white;
     z-index: 1;
     position: relative;
+    text-align: center;
 }
 
 .areaContainerEntry{
@@ -58,4 +59,74 @@
       color: red;
       width: 50vw;
       font-weight: 600;
+  }
+
+
+@media (max-width: 575.98px) {
+ 
+.Container-entry{
+    height: 90vh;
+    max-width: 85vw;
+    padding: 3em;
+}
+
+.text-entry{
+    font-size: 1em;
+}
+
+.areaContainerEntry img{
+    display: none;
+}
+
+.areaContainerEntry p{
+   font-size: 14px;
+   margin: 0 0  1.5em 0;
+   width: 70vw;
+}
+
+  .info-entry{
+      font-size: 10px;
+      color: red;
+      width: 70vw;
+  }
+
+}
+ 
+
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .Container-entry{
+        height: 90vh;
+        max-width: 90vw;
+        padding: 3em;
+    }
+    
+    .text-entry{
+        font-size: 1.5em;
+    }
+    
+    .areaContainerEntry img{
+        display: none;
+    }
+    
+    .areaContainerEntry p{
+       font-size: 16px;
+       margin: 0 0  2em 0;
+       width: 70vw;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .Container-entry{
+        max-width:80vw;
+    }
+    
+    .text-entry{
+        font-size: 1.6em;
+    }
+
+    .areaContainerEntry p{
+        font-size: 14px;
+     }
+   
   }
