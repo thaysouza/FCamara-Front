@@ -6,6 +6,7 @@ import cadastro from './pages/cadastro';
 import LoginPage from './pages/login';
 import UnidadePage from './pages/unidade';
 import EntryPage from './pages/entry';
+import DatePage from './pages/date';
 
 
 const MainRoutes = () => {
@@ -16,6 +17,7 @@ const MainRoutes = () => {
       <Route path='/login' component={LoginPage} />
       <Route path='/unidade' component={UnidadePage} />
       <Route path='/entry' component={EntryPage} />
+      <Route path='/date' component={DatePage} />
     </Switch>
   );
 };
