@@ -1,22 +1,53 @@
 import '../styles/form.css';
 import Button from './btn_global';
 import { Link } from 'react-router-dom';
-
 import api from '../services/api.service';
+import { toast } from 'react-toastify';
+import { useState } from 'react';
+import { useHistory } from 'react-router';
 
-const FormLogin = () => {
+export default function FormLogin() {
+
+  const history = useHistory();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [token] = useState('');
+
+  const storedToken = localStorage.getItem('token');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await api.login({
+        email,
+        password
+      });
+      token(storedToken)
+
+      toast.success('Login success!');
+
+      history.push('/entry');
+
+    } catch (error) {
+      console.log(error.message)
+      toast.error('Tente novamente, algo deu errado!');
+    }
+  }
+
   return (
     <>
       <section className='FormContainer'>
         <div className="areaOrange">
-          <form className='InputContainer' action=''>
+          <form onSubmit={handleSubmit} className='InputContainer' action=''>
             <fieldset>
               {' '}
               <label for='email'>e-mail</label>
               <input
-                id='email'
+                required
+                defaultValue={email}
+                onChange={(e) => setEmail(e.target.value)}
                 type='text'
-                name='email'
                 placeholder='seuemail@fcamara.com.br'
                 size='34'
               />
@@ -25,9 +56,10 @@ const FormLogin = () => {
               {' '}
               <label for='senha'>senha</label>
               <input
-                id='senha'
+                required
+                defaultValue={password}
+                onChange={(e) => setPassword(e.target.value)}
                 type='password'
-                name='senha'
                 placeholder='informe sua senha'
                 size='34'
               />
@@ -44,5 +76,3 @@ const FormLogin = () => {
     </>
   );
 };
-
-export default FormLogin;

@@ -32,7 +32,6 @@ export default function FormCadastro () {
       history.push('/login');
 
     } catch (error) {
-      console.log(error)
         toast.error('Tente novamente, algo deu errado!');
       }
   }
