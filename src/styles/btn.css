@@ -1,0 +1,49 @@
+
+.btn-global-style{
+    color: white;
+    padding: 10px 0;
+    margin: .8em;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .posicionar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.btn-orange span{
+    margin-right: .5em;
+}
+
+  .btn Button {
+    width: 15vw;
+  }
+
+  .btn-orange Button{
+    background-color: var(--laranja-fcamara);
+  }
+  
+  .btn-blue Button{
+    background-color: var(--azul-fcamara);
+  }
+
+  .btn-large Button{
+   width: 100%;
+  }
+
+  
+
+  @media(max-width: 992px) {
+
+    .btn Button {
+        width: 30vw;
+      }
+    
+  }
+    
+
+
+
