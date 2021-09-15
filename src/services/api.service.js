@@ -35,7 +35,7 @@ class Api {
     try {
       await this.api.post('/register', payload);
     } catch (error) {
-      throw error;
+      throw Error;
     }
   }
   

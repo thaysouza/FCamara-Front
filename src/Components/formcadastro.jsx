@@ -1,76 +1,55 @@
 import '../styles/form.css';
 import Button from './btn_global';
-import { Link, withRouter } from 'react-router-dom';
-import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import api from '../services/api.service';
+import { useState } from 'react';
+import { useHistory } from 'react-router';
 
-class FormCadastro extends Component {
-  state = {
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    message: '',
-  };
 
-  handleInput = (e) => {
-    const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    });
-  };
+export default function FormCadastro () {
+  const history = useHistory();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [confirmSenha, setConfirmSenha] = useState('');
 
-  handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (senha !== confirmSenha) {
+      toast.error('senhas não conferem');
+    }
 
     try {
-      const { name, email, password, confirmPassword } = this.state;
-
-      if (password !== confirmPassword) {
-        this.setState({
-          message: 'As senhas não correspondem, tente novamente!',
-        });
-        return;
-      }
-
-      this.setState({
-        name: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
-        errorMessage: '',
-      });
 
       await api.register({
         name,
         email,
-        password,
+        password:senha,
       });
-      this.props.history.push('/login');
-    } catch (error) {
-      console.log(error);
-      this.setState({
-        message: 'error.response.data',
-      });
-    }
-  };
+      toast.success('Usuário cadastrado com sucesso');
 
-  render() {
+      history.push('/login');
+
+    } catch (error) {
+      console.log(error)
+        toast.error('Tente novamente, algo deu errado!');
+      }
+  }
     return (
       <>
         <section className='FormContainer'>
           <div className='areaBlue'>
-            <form onSubmit={this.handleSubmit} className='InputContainer'>
+            <form onSubmit={handleSubmit} className='InputContainer'>
               <fieldset>
                 {' '}
                 <label for='name'>nome completo*</label>
                 <input
                   type='text'
                   required
-                  name='name'
                   placeholder='informe seu nome'
-                  value={this.state.name}
-                  onChange={this.handleInput}
+                  defaultValue={name}
+                  onChange={(e) => setName(e.target.value)}
                   size='34'
                 />
               </fieldset>
@@ -79,11 +58,10 @@ class FormCadastro extends Component {
                 <label for='email'>e-mail*</label>
                 <input
                   type='email'
-                  name='email'
                   required
                   placeholder='seuemail@fcamara.com.br'
-                  value={this.state.email}
-                  onChange={this.handleInput}
+                  defaultValue={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   size='34'
                 />
               </fieldset>
@@ -93,11 +71,10 @@ class FormCadastro extends Component {
                   <label for='password'>senha*</label>
                   <input
                     type='password'
-                    name='password'
                     required
                     placeholder='informe a senha'
-                    value={this.state.password}
-                    onChange={this.handleInput}
+                    defaultValue={senha}
+                    onChange={(e) => setSenha(e.target.value)}
                     size='10'
                   />
                 </fieldset>
@@ -106,10 +83,9 @@ class FormCadastro extends Component {
                   <label for='confirmPassword'>confirmar senha*</label>
                   <input
                     type='password'
-                    name='confirmPassword'
                     required
-                    value={this.state.confirmPassword}
-                    onChange={this.handleInput}
+                    defaultValue={confirmSenha}
+                    onChange={(e) => setConfirmSenha(e.target.value)}
                     placeholder='confirme a senha'
                     size='10'
                   />
@@ -119,7 +95,7 @@ class FormCadastro extends Component {
                 CADASTRAR
               </Button>
             </form>
-            {this.state.message && <div>{this.state.message}</div>}
+            
             <p>
               Já possui cadastro? <Link to='/login'>Faça Login.</Link>
             </p>
@@ -127,7 +103,4 @@ class FormCadastro extends Component {
         </section>
       </>
     );
-  }
-}
-
-export default withRouter(FormCadastro);
+  };
