@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/form.css';
 import '../styles/unidade.css';
 import Button from './btn_global';
@@ -64,9 +65,11 @@ const Unidade = () => {
               <p>
                 Prç. dos Expedicionários, 19 - Gonzaga, Santos - SP, 11065-500
               </p>
-              <Button id='cadastroButton' type='submit'>
-                Confirmar
-              </Button>
+              <Link to='/date'>
+                <Button id='cadastroButton' type='submit'>
+                   Confirmar
+                 </Button>
+              </Link>
             </form>
           </div>
         </div>
