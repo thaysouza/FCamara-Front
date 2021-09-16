@@ -1,4 +1,5 @@
 import '../styles/form.css';
+import '../styles/btn.css';
 import Button from './btn_global';
 import { Link } from 'react-router-dom';
 import api from '../services/api.service';
@@ -34,7 +35,7 @@ export default function FormLogin() {
   return (
     <>
       <section className='FormContainer'>
-        <div className="areaOrange">
+        <div className="areaOrange btn-large btn-blue">
           <form onSubmit={handleSubmit} className='InputContainer' action=''>
             <fieldset>
               {' '}
@@ -60,13 +61,13 @@ export default function FormLogin() {
                 size='34'
               />
             </fieldset>
-            <Button 
-            id='cadastroButton' 
-            type='submit'
-            >
-              ENTRAR
-            </Button>
+           
+              <Button id='cadastroButton' type='submit'>
+                ENTRAR
+              </Button>
+            
           </form>
+
           <p>
             Não possui Login? <Link to='/cadastro'>Faça o Cadastro.</Link>
           </p>

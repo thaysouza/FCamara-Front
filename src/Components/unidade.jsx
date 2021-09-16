@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/form.css';
 import '../styles/unidade.css';
+import '../styles/btn.css';
 import Button from './btn_global';
 import imgLocal from '../img/imglocal.png';
 
@@ -26,7 +27,7 @@ const Unidade = () => {
       <section className='FormContainer'>
         <div className='areaContainer areaOrange'>
           <div>
-            <img src={imgLocal} alt='' />
+            <img className="img-local" src={imgLocal} alt='' />
 
             <form>
               <div className='radio-item'>
@@ -65,11 +66,22 @@ const Unidade = () => {
               <p>
                 Prç. dos Expedicionários, 19 - Gonzaga, Santos - SP, 11065-500
               </p>
-              <Link to='/date'>
-                <Button id='cadastroButton' type='submit'>
-                   Confirmar
-                 </Button>
-              </Link>
+              <div className="posicionar">
+                <div className="btn-orange btn">
+                  <Link to='/entry'>
+                    <Button className="btn-orange" id='cadastroButton' type='submit'>
+                      <span>❮</span> Voltar
+                    </Button>
+                  </Link>
+                </div>
+                <div className="btn-blue btn">
+                  <Link to='/date'>
+                    <Button id='cadastroButton' type='submit'>
+                      Confirmar
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </form>
           </div>
         </div>

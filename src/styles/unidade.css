@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.areaContainer img{
+.areaContainer .img-local{
     margin-bottom: 4vh;
     width: 50%;
 }

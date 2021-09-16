@@ -1,7 +1,7 @@
 @import url('global.css');
 
 .FormContainer {
-  height: 70vh;
+  height: 80vh;
   width: 50vw;
   margin: 0 auto;
   padding: 2em 6em;
@@ -76,8 +76,18 @@ input[type='password'] {
 @media (max-width: 575.98px) {
   
   .FormContainer {
+    width: 70vw;
     padding: 2.5em;
-   
+  }
+  
+}
+
+
+@media (min-width: 576px) and (max-width: 992px) {
+  
+  .FormContainer {
+    width: 70vw;
+    padding: 2.5em;
   }
   
 }

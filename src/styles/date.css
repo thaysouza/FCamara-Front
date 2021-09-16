@@ -1,0 +1,24 @@
+@import url('global.css');
+
+.areaContainer .img-date{
+    width: 6em;
+}
+
+.title-date{
+    margin-top: 1.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.form-date input{
+    margin: 1.5em;
+}
+
+
+@media (max-width: 575.98px) {
+    .areaContainer img{
+        width: 5em;
+    }
+  }
+  
