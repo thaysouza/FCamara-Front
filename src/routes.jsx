@@ -4,9 +4,8 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import HomePage from './pages/home';
 import cadastro from './pages/cadastro';
 import LoginPage from './pages/login';
-import UnidadePage from './pages/unidade';
+import AgendamentoPage from './pages/agendamento';
 import EntryPage from './pages/entry';
-import DatePage from './pages/date';
 
 
 const MainRoutes = () => {
@@ -19,9 +18,8 @@ const MainRoutes = () => {
       <Route path='/login' >
       {token ? <Redirect to='/entry'/> : <LoginPage /> }
       </Route>
-      <Route path='/unidade' component={UnidadePage} />
+      <Route path='/agendamento' component={AgendamentoPage} />
       <Route path='/entry' component={EntryPage} />
-      <Route path='/date' component={DatePage} />
     </Switch>
   );
 };

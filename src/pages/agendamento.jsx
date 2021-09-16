@@ -1,15 +1,15 @@
 import React from 'react';
-import Unidade from '../Components/unidade';
+import Agendamento from '../Components/agendamento';
 import '../styles/background.css';
 import GrafismosOrange from '../Components/grafismos_orange';
 
-const UnidadePage = () => {
+const AgendamentoPage = () => {
   return (
     <>
       <div className='container-bg colorOrange'>
         <div>
-          <h2 className='text-cadastro'>Escolha sua unidade</h2>
-          <Unidade />
+          <h2 className='text-cadastro'>Faça seu agendamento</h2>
+          <Agendamento />
           <GrafismosOrange />
         </div>
       </div>
@@ -17,4 +17,4 @@ const UnidadePage = () => {
   );
 };
 
-export default UnidadePage;
+export default AgendamentoPage;

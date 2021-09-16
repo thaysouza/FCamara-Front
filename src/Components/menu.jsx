@@ -42,7 +42,7 @@ const Menu = () => {
           </button>
           <ul id='menu' role='menu'>
             <li>
-              <Link className='link-menu ' to='/unidade'>
+              <Link className='link-menu ' to='/agendamento'>
                 Agendamento
               </Link>
             </li>

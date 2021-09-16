@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import '../styles/form.css';
 import '../styles/unidade.css';
 import '../styles/btn.css';
 import Button from './btn_global';
 import imgLocal from '../img/imglocal.png';
 
-const Unidade = () => {
+
+const Agendamento = () => {
+
+  const [selectedDate, setSelectedDate] = useState(null);
+
+
   const [formData, setformData] = useState({
     unidade: '',
   });
@@ -61,11 +68,27 @@ const Unidade = () => {
                   />
                   <label for='santos'>Santos</label>
                 </div>
+
               </div>
 
               <p>
                 Prç. dos Expedicionários, 19 - Gonzaga, Santos - SP, 11065-500
               </p>
+
+              <h3>Informe o dia do retorno</h3>
+
+              <DatePicker
+                selected={selectedDate}
+                onChange={date => setSelectedDate(date)}
+                dateFormat="dd/MM/yyyy"
+                minDate={new Date()}
+                filterDate={date => date.getDay() !== 6 && date.getDay() !== 0}
+                isClearable
+                showYearDropdown
+                scrollableMonthYearDropdown
+                placeholderText="Please select a date"
+              />
+
               <div className="posicionar">
                 <div className="btn-orange btn">
                   <Link to='/entry'>
@@ -75,7 +98,7 @@ const Unidade = () => {
                   </Link>
                 </div>
                 <div className="btn-blue btn">
-                  <Link to='/date'>
+                  <Link>
                     <Button id='cadastroButton' type='submit'>
                       Confirmar
                     </Button>
@@ -90,4 +113,4 @@ const Unidade = () => {
   );
 };
 
-export default Unidade;
+export default Agendamento;
