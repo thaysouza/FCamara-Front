@@ -8,7 +8,7 @@ const Entry = () => {
     <>
       <section className='Container-entry'>
 
-        <h1 className="text-entry">Medidas de preveção para o retorno presencial</h1>
+        <h1 className="text-entry">Medidas de prevenção para o retorno presencial</h1>
         <div className='areaContainerEntry'>
 
             <img src={imgEntry} alt='' />

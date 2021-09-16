@@ -18,8 +18,8 @@ const MainRoutes = () => {
       <Route path='/login' >
       {token ? <Redirect to='/entry'/> : <LoginPage /> }
       </Route>
-      <Route path='/agendamento' component={AgendamentoPage} />
       <Route path='/entry' component={EntryPage} />
+      <Route path='/agendamento' component={AgendamentoPage} />
     </Switch>
   );
 };

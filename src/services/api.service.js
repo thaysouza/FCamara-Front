@@ -59,7 +59,8 @@ class Api {
 
     try {
       const { data } = await this.api.post(`/appointment`, { city, userId, date} );
-      return data;  
+      console.log({data}); 
+      return data
     } catch (error) {
       throw error;
     }

@@ -27,8 +27,7 @@ export default function FormLogin() {
       history.push('/entry');
 
     } catch (error) {
-      console.log(error.message)
-      toast.error('Tente novamente, algo deu errado!');
+      toast.error('Email e senha não cadastrados ou não conferem');
     }
   }
 

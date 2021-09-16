@@ -7,9 +7,13 @@ import '../styles/unidade.css';
 import '../styles/btn.css';
 import Button from './btn_global';
 import imgLocal from '../img/imglocal.png';
+import api from '../services/api.service';
+import { toast } from 'react-toastify';
+import { useHistory } from 'react-router';
 
 
 const Agendamento = () => {
+  const history = useHistory();
 
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -29,6 +33,25 @@ const Agendamento = () => {
     });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await api.makeAppointment({
+        city: formData.unidade,
+        date: selectedDate
+      });
+      
+      history.push('/entry');
+
+      toast.success('Agendamento efetuado com sucesso!');
+
+    } catch (error) {
+      console.log(error.message)
+      toast.error('Algo deu errado. Por favor, tente novamente!');
+    }
+  };
+
   return (
     <>
       <section className='FormContainer'>
@@ -36,7 +59,7 @@ const Agendamento = () => {
           <div>
             <img className="img-local" src={imgLocal} alt='' />
 
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className='radio-item'>
                 <div className='type-radio'>
                   <input
