@@ -6,7 +6,7 @@ import '../styles/form.css';
 import '../styles/unidade.css';
 import '../styles/btn.css';
 import Button from './btn_global';
-import imgLocal from '../img/imglocal.png';
+import agenda from '../img/agenda.png';
 import api from '../services/api.service';
 import { toast } from 'react-toastify';
 import { useHistory } from 'react-router';
@@ -57,7 +57,7 @@ const Agendamento = () => {
       <section className='FormContainer'>
         <div className='areaContainer areaOrange'>
           <div>
-            <img className="img-local" src={imgLocal} alt='' />
+            <img className="img-local" src={agenda} alt='' />
 
             <form onSubmit={handleSubmit}>
               <div className='radio-item'>
@@ -72,14 +72,14 @@ const Agendamento = () => {
                   />
                   <label for='sp'>São Paulo</label>
                 </div>
-              </div>
+             
 
               <p>
                 R. Bela Cintra, 986 - 2° andar - Consolação, São Paulo - SP,
                 01415-906
               </p>
 
-              <div className='radio-item'>
+             
                 <div className='type-radio'>
                   <input
                     type='radio'

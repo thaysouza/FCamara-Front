@@ -11,15 +11,8 @@
 
 .areaContainer .img-local{
     margin-bottom: 4vh;
-    width: 50%;
+    width: 20%;
 }
-
-
-.type-radio{
-    text-align: center;
-    display: block;
-}
-
 
 .type-radio label{
     font-size: 1.3em;
@@ -28,8 +21,9 @@
 
 .radio-item{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: var(--dark-blue);
     font-weight: bold;
   }

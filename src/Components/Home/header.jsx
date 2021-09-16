@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/nav.css';
-import Logo from '../../img/grupo-fcamara-laranja.png';
+import Logo from '../../img/logof.png';
 
 const Header = () => {
   function toggleMenu(event) {
