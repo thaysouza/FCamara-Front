@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/entry.css';
 import '../styles/nav.css';
 import imgEntry from '../img/undraw_social.svg';
+import Button from './btn_global';
 import Logo from './menu/logo';
 import Logout from './menu/logout'
 
@@ -20,6 +21,24 @@ const Entry = () => {
       </header>
 
       <section className='Container-entry'>
+
+        <div className="posicionar">
+          <div className="btn-orange btn">
+            <Link to='/agendamento'>
+              <Button className="btn-orange" id='cadastroButton' type='submit'>
+                Fazer Agendamento
+              </Button>
+            </Link>
+          </div>
+          <div className="btn-blue btn">
+            <Link to='/verAgendamentos'>
+              <Button id='cadastroButton' type='submit'>
+                Ver agendamentos
+              </Button>
+            </Link>
+          </div>
+
+        </div>
 
         <h1 className="text-entry">Medidas de prevenção para o retorno presencial</h1>
         <div className='areaContainerEntry'>
@@ -40,8 +59,6 @@ const Entry = () => {
 
           </div>
         </div>
-
-        <p className="info-entry">Em caso de suspeitas de covid cancele seu agendamento e envie um email para fcamara@fcamera.com.br</p>
       </section>
     </>
   );

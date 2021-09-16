@@ -2,8 +2,8 @@
 
 .FormContainer {
   height: 80vh;
-  width: 50vw;
-  margin: 0 auto;
+  width: 40vw;
+ 
   padding: 2em 6em;
   border-radius: 1em;
   display: flex;
@@ -76,10 +76,10 @@ input[type='password'] {
 @media (max-width: 575.98px) {
   
   .FormContainer {
-    width: 70vw;
+    width: 80vw;
     padding: 2.5em;
   }
-  
+
 }
 
 
@@ -87,6 +87,14 @@ input[type='password'] {
   
   .FormContainer {
     width: 70vw;
+    padding: 2.5em;
+  }
+  
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .FormContainer {
+    width: 60vw;
     padding: 2.5em;
   }
   
