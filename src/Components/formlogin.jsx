@@ -11,9 +11,6 @@ export default function FormLogin() {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [token] = useState('');
-
-  const storedToken = localStorage.getItem('token');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,7 +20,6 @@ export default function FormLogin() {
         email,
         password
       });
-      token(storedToken)
 
       toast.success('Login success!');
 
@@ -64,7 +60,10 @@ export default function FormLogin() {
                 size='34'
               />
             </fieldset>
-            <Button id='cadastroButton' type='submit'>
+            <Button 
+            id='cadastroButton' 
+            type='submit'
+            >
               ENTRAR
             </Button>
           </form>
