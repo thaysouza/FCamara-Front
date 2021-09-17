@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import '../styles/form.css';
 import '../styles/unidade.css';
@@ -15,31 +14,20 @@ import { useHistory } from 'react-router';
 const Agendamento = () => {
   const history = useHistory();
 
-  const [selectedDate, setSelectedDate] = useState(null);
-
-
-  const [formData, setformData] = useState({
-    unidade: '',
-  });
-
-  const handleChange = (e) => {
-    const target = e.target;
-    const name = target.name;
-    const value = target.value;
-
-    setformData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  const [city, setCity] = useState('');
+  const [selectedDate, setSelectedDate] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    const data = selectedDate.split('-').reverse().join('/');
+    const user = JSON.parse(localStorage.getItem('user'));
+    const { id } = user;
+    
     try {
       await api.makeAppointment({
-        city: formData.unidade,
-        date: selectedDate
+        city,
+        userId: id,
+        date: data
       });
       
       history.push('/entry');
@@ -47,7 +35,6 @@ const Agendamento = () => {
       toast.success('Agendamento efetuado com sucesso!');
 
     } catch (error) {
-      console.log(error.message)
       toast.error('Algo deu errado. Por favor, tente novamente!');
     }
   };
@@ -67,10 +54,9 @@ const Agendamento = () => {
                     id='sp'
                     name='unidade'
                     value='sp'
-                    onChange={handleChange}
-                    checked={formData.unidade === 'sp'}
+                    onChange={(e) => setCity(e.target.value)}
                   />
-                  <label for='sp'>São Paulo</label>
+                  <label htmlFor='sp'>São Paulo</label>
                 </div>
              
 
@@ -86,10 +72,9 @@ const Agendamento = () => {
                     id='santos'
                     name='unidade'
                     value='santos'
-                    onChange={handleChange}
-                    checked={formData.unidade === 'santos'}
+                    onChange={(e) => setCity(e.target.value)}
                   />
-                  <label for='santos'>Santos</label>
+                  <label htmlFor='santos'>Santos</label>
                 </div>
 
               </div>
@@ -100,16 +85,10 @@ const Agendamento = () => {
 
               <h3>Informe o dia do retorno</h3>
 
-              <DatePicker
-                selected={selectedDate}
-                onChange={date => setSelectedDate(date)}
-                dateFormat="dd/MM/yyyy"
-                minDate={new Date()}
-                filterDate={date => date.getDay() !== 6 && date.getDay() !== 0}
-                isClearable
-                showYearDropdown
-                scrollableMonthYearDropdown
-                placeholderText="Please select a date"
+              <input 
+              type='date'
+              value={selectedDate}
+              onChange={(e) => setSelectedDate(e.target.value)}
               />
 
               <div className="posicionar">
@@ -121,11 +100,9 @@ const Agendamento = () => {
                   </Link>
                 </div>
                 <div className="btn-blue btn">
-                  <Link>
                     <Button id='cadastroButton' type='submit'>
                       Confirmar
                     </Button>
-                  </Link>
                 </div>
               </div>
             </form>

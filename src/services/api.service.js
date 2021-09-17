@@ -20,14 +20,6 @@ class Api {
       },
       error => { return Promise.reject(error)}
     );
-
-    this.api.interceptors.response.use(
-      (response) => response,
-      (error) => {
-        localStorage.removeItem('token');
-        throw error;
-      }
-    )
   };
 
   // Rotas de usuário
@@ -44,7 +36,7 @@ class Api {
     try {
       const { data } = await this.api.post('/login', {email, password});
       const { token } = data;
-      const { payload } = data; 
+      const { payload } = data;
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(payload));
       return data.payload;
@@ -53,13 +45,17 @@ class Api {
     }
   };
 
+  logout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+  }
+
   // Rotas de agendamento
   makeAppointment = async (payload) => {
     const { city, userId, date } = payload;
 
     try {
-      const { data } = await this.api.post(`/appointment`, { city, userId, date} );
-      console.log({data}); 
+      const { data } = await this.api.post(`/appointment`, { city, userId, date} ); 
       return data
     } catch (error) {
       throw error;
